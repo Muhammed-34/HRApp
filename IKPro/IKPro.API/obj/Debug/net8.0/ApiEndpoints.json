@@ -1,0 +1,594 @@
+[
+  {
+    "ContainingType": "IKPro.API.Controllers.LoginController",
+    "Method": "LoginAsync",
+    "RelativePath": "api/Login/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "IKPro.Application.DTOs.Login.Login_Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.LoginController",
+    "Method": "LogoutAsync",
+    "RelativePath": "api/Login/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.LoginController",
+    "Method": "SifreS\u0131f\u0131rla",
+    "RelativePath": "api/Login/sifremiUnuttum",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.PaketController",
+    "Method": "PaketEkle",
+    "RelativePath": "api/Paket/paket-ekle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paketDto",
+        "Type": "IKPro.Application.DTOs.Paket.PaketEkle_Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.PaketController",
+    "Method": "TumPaketler",
+    "RelativePath": "api/Paket/paket-listele",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[IKPro.Application.DTOs.Paket.Paket_Dto, IKPro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.SirketController",
+    "Method": "TumSirketler",
+    "RelativePath": "api/Sirket",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[IKPro.Application.DTOs.Sirket.Sirket_Dto, IKPro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.SirketController",
+    "Method": "SirketEkle",
+    "RelativePath": "api/Sirket/sirketekle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sirketDto",
+        "Type": "IKPro.Application.DTOs.Sirket.SirketEkle_Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.TalepController",
+    "Method": "AvansTalepEkle",
+    "RelativePath": "api/Talep/avansTalepEkle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "avans",
+        "Type": "IKPro.Application.DTOs.TalepForm.AvansTalepEkle_Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.TalepController",
+    "Method": "AvansTalepGuncelle",
+    "RelativePath": "api/Talep/avansTalepGuncelle",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "avans",
+        "Type": "IKPro.Application.DTOs.TalepForm.TalepGuncelle_Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.TalepController",
+    "Method": "TumAvanslar",
+    "RelativePath": "api/Talep/avansTalepListele/{sirketId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sirketId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[IKPro.Application.DTOs.TalepForm.AvansTalep_Dto, IKPro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.TalepController",
+    "Method": "HarcamaTalepEkle",
+    "RelativePath": "api/Talep/harcamaTalepEkle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "harcama",
+        "Type": "IKPro.Application.DTOs.TalepForm.HarcamaTalepEkle_Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.TalepController",
+    "Method": "HarcamaTalepGuncelle",
+    "RelativePath": "api/Talep/harcamaTalepGuncelle",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "harcama",
+        "Type": "IKPro.Application.DTOs.TalepForm.TalepGuncelle_Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.TalepController",
+    "Method": "TumHarcamalar",
+    "RelativePath": "api/Talep/harcamaTalepListele/{sirketId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sirketId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[IKPro.Application.DTOs.TalepForm.HarcamaTalep_Dto, IKPro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.TalepController",
+    "Method": "IzinTalepEkle",
+    "RelativePath": "api/Talep/izinTalepEkle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "izin",
+        "Type": "IKPro.Application.DTOs.TalepForm.IzinTalepEkle_Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.TalepController",
+    "Method": "IzinTalepGuncelle",
+    "RelativePath": "api/Talep/izinTalepGuncelle",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "izin",
+        "Type": "IKPro.Application.DTOs.TalepForm.TalepGuncelle_Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.TalepController",
+    "Method": "TumIzinler",
+    "RelativePath": "api/Talep/izinTalepListele/{sirketId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sirketId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[IKPro.Application.DTOs.TalepForm.IzinTalep_Dto, IKPro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.UserController",
+    "Method": "PersonelDetayGetir",
+    "RelativePath": "api/User/personelDetayGetir/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IKPro.Application.DTOs.User.Personel_Dto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.UserController",
+    "Method": "PersonelEkle",
+    "RelativePath": "api/User/personelEkle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "personelDto",
+        "Type": "IKPro.Application.DTOs.User.PersonelEkle_Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.UserController",
+    "Method": "PersonelListele",
+    "RelativePath": "api/User/personelgetir/{sirketId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sirketId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IKPro.Application.DTOs.User.Personel_Dto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.UserController",
+    "Method": "PersonelGuncelle",
+    "RelativePath": "api/User/personelGuncelle",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "personelDto",
+        "Type": "IKPro.Application.DTOs.User.PersonelGuncelle_Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.UserController",
+    "Method": "YoneticiDetayGetir",
+    "RelativePath": "api/User/sirketyonetici/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IKPro.Application.DTOs.User.SirketYonetici_Dto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.UserController",
+    "Method": "SirketYoneticisiEkleAsync",
+    "RelativePath": "api/User/sirketyoneticiekle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sirketYoneticiDto",
+        "Type": "IKPro.Application.DTOs.User.SirketYoneticiEkle_Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.UserController",
+    "Method": "SirketYoneticisiGuncelle",
+    "RelativePath": "api/User/sirketyoneticiguncelle",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sirketYoneticiDto",
+        "Type": "IKPro.Application.DTOs.User.SirketYoneticiGuncelle_Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.UserController",
+    "Method": "SirketYoneticiListele",
+    "RelativePath": "api/User/sirketyoneticilistesi",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "IKPro.Application.DTOs.User.SirketYonetici_Dto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.UserController",
+    "Method": "SiteYoneticisiGuncelle",
+    "RelativePath": "api/User/siteyonetici",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "siteYoneticiDto",
+        "Type": "IKPro.Application.DTOs.User.SiteYoneticiGuncelle_Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IKPro.API.Controllers.UserController",
+    "Method": "SiteYoneticiDetayGetir",
+    "RelativePath": "api/User/siteyonetici/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "IKPro.Application.DTOs.User.SiteYonetici_Dto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

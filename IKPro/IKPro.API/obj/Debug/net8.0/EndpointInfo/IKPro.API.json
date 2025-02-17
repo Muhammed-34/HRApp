@@ -1,0 +1,2025 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "IKPro.API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Login/login": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login_Dto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login_Dto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login_Dto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Login/logout": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Login/sifremiUnuttum": {
+      "get": {
+        "tags": [
+          "Login"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Paket/paket-listele": {
+      "get": {
+        "tags": [
+          "Paket"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Paket_Dto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Paket_Dto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Paket_Dto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Paket/paket-ekle": {
+      "post": {
+        "tags": [
+          "Paket"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaketEkle_Dto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaketEkle_Dto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaketEkle_Dto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Sirket": {
+      "get": {
+        "tags": [
+          "Sirket"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sirket_Dto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sirket_Dto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sirket_Dto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Sirket/sirketekle": {
+      "post": {
+        "tags": [
+          "Sirket"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SirketEkle_Dto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SirketEkle_Dto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SirketEkle_Dto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Talep/avansTalepEkle": {
+      "post": {
+        "tags": [
+          "Talep"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AvansTalepEkle_Dto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AvansTalepEkle_Dto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AvansTalepEkle_Dto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Talep/avansTalepListele/{sirketId}": {
+      "get": {
+        "tags": [
+          "Talep"
+        ],
+        "parameters": [
+          {
+            "name": "sirketId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AvansTalep_Dto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AvansTalep_Dto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AvansTalep_Dto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Talep/avansTalepGuncelle": {
+      "put": {
+        "tags": [
+          "Talep"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TalepGuncelle_Dto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TalepGuncelle_Dto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TalepGuncelle_Dto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Talep/harcamaTalepEkle": {
+      "post": {
+        "tags": [
+          "Talep"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HarcamaTalepEkle_Dto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HarcamaTalepEkle_Dto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HarcamaTalepEkle_Dto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Talep/harcamaTalepListele/{sirketId}": {
+      "get": {
+        "tags": [
+          "Talep"
+        ],
+        "parameters": [
+          {
+            "name": "sirketId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HarcamaTalep_Dto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HarcamaTalep_Dto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HarcamaTalep_Dto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Talep/harcamaTalepGuncelle": {
+      "put": {
+        "tags": [
+          "Talep"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TalepGuncelle_Dto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TalepGuncelle_Dto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TalepGuncelle_Dto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Talep/izinTalepEkle": {
+      "post": {
+        "tags": [
+          "Talep"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IzinTalepEkle_Dto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IzinTalepEkle_Dto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IzinTalepEkle_Dto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Talep/izinTalepListele/{sirketId}": {
+      "get": {
+        "tags": [
+          "Talep"
+        ],
+        "parameters": [
+          {
+            "name": "sirketId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IzinTalep_Dto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IzinTalep_Dto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IzinTalep_Dto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Talep/izinTalepGuncelle": {
+      "put": {
+        "tags": [
+          "Talep"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TalepGuncelle_Dto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TalepGuncelle_Dto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TalepGuncelle_Dto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/User/siteyonetici/{id}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SiteYonetici_Dto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SiteYonetici_Dto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SiteYonetici_Dto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/User/siteyonetici": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SiteYoneticiGuncelle_Dto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SiteYoneticiGuncelle_Dto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SiteYoneticiGuncelle_Dto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/User/sirketyonetici/{id}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SirketYonetici_Dto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SirketYonetici_Dto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SirketYonetici_Dto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/User/sirketyoneticilistesi": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SirketYonetici_Dto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SirketYonetici_Dto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SirketYonetici_Dto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/User/sirketyoneticiekle": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SirketYoneticiEkle_Dto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SirketYoneticiEkle_Dto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SirketYoneticiEkle_Dto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/User/sirketyoneticiguncelle": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SirketYoneticiGuncelle_Dto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SirketYoneticiGuncelle_Dto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SirketYoneticiGuncelle_Dto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/User/personelDetayGetir/{id}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Personel_Dto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Personel_Dto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Personel_Dto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/User/personelEkle": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PersonelEkle_Dto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PersonelEkle_Dto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PersonelEkle_Dto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/User/personelGuncelle": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PersonelGuncelle_Dto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PersonelGuncelle_Dto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PersonelGuncelle_Dto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/User/personelgetir/{sirketId}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "sirketId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Personel_Dto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Personel_Dto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Personel_Dto"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AvansTalepEkle_Dto": {
+        "type": "object",
+        "properties": {
+          "talepTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "onayDurumu": {
+            "$ref": "#/components/schemas/OnayDurumu"
+          },
+          "cevaplanmaTarihi": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "tutar": {
+            "type": "number",
+            "format": "double"
+          },
+          "paraBirimi": {
+            "type": "string",
+            "nullable": true
+          },
+          "aciklama": {
+            "type": "string",
+            "nullable": true
+          },
+          "avansTuru": {
+            "type": "string",
+            "nullable": true
+          },
+          "appUserId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AvansTalep_Dto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "talepTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "onayDurumu": {
+            "$ref": "#/components/schemas/OnayDurumu"
+          },
+          "cevaplanmaTarihi": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "tutar": {
+            "type": "number",
+            "format": "double"
+          },
+          "paraBirimi": {
+            "type": "string",
+            "nullable": true
+          },
+          "aciklama": {
+            "type": "string",
+            "nullable": true
+          },
+          "avansTuru": {
+            "type": "string",
+            "nullable": true
+          },
+          "appUserId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HarcamaTalepEkle_Dto": {
+        "type": "object",
+        "properties": {
+          "harcamaTuru": {
+            "type": "string",
+            "nullable": true
+          },
+          "paraBirimi": {
+            "type": "string",
+            "nullable": true
+          },
+          "tutar": {
+            "type": "number",
+            "format": "double"
+          },
+          "onayDurumu": {
+            "$ref": "#/components/schemas/OnayDurumu"
+          },
+          "talepTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "cevaplanmaTarihi": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dosyaEkleme": {
+            "type": "string",
+            "nullable": true
+          },
+          "appUserId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HarcamaTalep_Dto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "harcamaTuru": {
+            "type": "string",
+            "nullable": true
+          },
+          "paraBirimi": {
+            "type": "string",
+            "nullable": true
+          },
+          "onayDurumu": {
+            "$ref": "#/components/schemas/OnayDurumu"
+          },
+          "talepTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "cevaplanmaTarihi": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dosyaEkleme": {
+            "type": "string",
+            "nullable": true
+          },
+          "tutar": {
+            "type": "number",
+            "format": "double"
+          },
+          "appUserId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IzinTalepEkle_Dto": {
+        "type": "object",
+        "properties": {
+          "izinTuru": {
+            "type": "string",
+            "nullable": true
+          },
+          "baslangicTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "bitisTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "talepTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "gunSayisi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cevaplanmaTarihi": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "onayDurumu": {
+            "$ref": "#/components/schemas/OnayDurumu"
+          },
+          "appUserId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IzinTalep_Dto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "izinTuru": {
+            "type": "string",
+            "nullable": true
+          },
+          "baslangicTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "bitisTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "talepTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "gunSayisi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cevaplanmaTarihi": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "onayDurumu": {
+            "$ref": "#/components/schemas/OnayDurumu"
+          },
+          "appUserId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Login_Dto": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "password": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnayDurumu": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "PaketEkle_Dto": {
+        "type": "object",
+        "properties": {
+          "paketAdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "paketSuresi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "yayinlanmaTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "yayindanKaldirilmaTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fiyat": {
+            "type": "number",
+            "format": "double"
+          },
+          "aktif": {
+            "type": "boolean"
+          },
+          "kullaniciSayisi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paraBirimi": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Paket_Dto": {
+        "type": "object",
+        "properties": {
+          "paketID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paketAdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "paketSuresi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "yayinlanmaTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "yayindanKaldirilmaTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fiyat": {
+            "type": "number",
+            "format": "double"
+          },
+          "aktif": {
+            "type": "boolean"
+          },
+          "kullaniciSayisi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paraBirimi": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PersonelEkle_Dto": {
+        "type": "object",
+        "properties": {
+          "fotograf": {
+            "type": "string",
+            "nullable": true
+          },
+          "adi": {
+            "type": "string",
+            "nullable": true
+          },
+          "soyadi": {
+            "type": "string",
+            "nullable": true
+          },
+          "ikinciAdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "ikinciSoyadi": {
+            "type": "string",
+            "nullable": true
+          },
+          "dogumTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dogumYeri": {
+            "type": "string",
+            "nullable": true
+          },
+          "tcNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "iseGirisTarih": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "istenCikisTarihi": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "aktif": {
+            "type": "boolean"
+          },
+          "meslek": {
+            "type": "string",
+            "nullable": true
+          },
+          "departman": {
+            "type": "string",
+            "nullable": true
+          },
+          "sirketID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "adres": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "maas": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PersonelGuncelle_Dto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fotograf": {
+            "type": "string",
+            "nullable": true
+          },
+          "adres": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Personel_Dto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fotograf": {
+            "type": "string",
+            "nullable": true
+          },
+          "adi": {
+            "type": "string",
+            "nullable": true
+          },
+          "soyadi": {
+            "type": "string",
+            "nullable": true
+          },
+          "ikinciAdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "ikinciSoyadi": {
+            "type": "string",
+            "nullable": true
+          },
+          "dogumTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dogumYeri": {
+            "type": "string",
+            "nullable": true
+          },
+          "tcNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "iseGirisTarih": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "istenCikisTarihi": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "aktif": {
+            "type": "boolean"
+          },
+          "meslek": {
+            "type": "string",
+            "nullable": true
+          },
+          "departman": {
+            "type": "string",
+            "nullable": true
+          },
+          "sirketID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "adres": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "maas": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SirketEkle_Dto": {
+        "type": "object",
+        "properties": {
+          "ad": {
+            "type": "string",
+            "nullable": true
+          },
+          "unvan": {
+            "type": "string",
+            "nullable": true
+          },
+          "mersisNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "vergiNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "vergiDairesi": {
+            "type": "string",
+            "nullable": true
+          },
+          "logo": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefon": {
+            "type": "string",
+            "nullable": true
+          },
+          "adres": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "calisanSayisi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kurulusYili": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sozlesmeBaslangic": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "sozlesmeBitis": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "aktif": {
+            "type": "boolean"
+          },
+          "paketID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SirketYoneticiEkle_Dto": {
+        "type": "object",
+        "properties": {
+          "fotograf": {
+            "type": "string",
+            "nullable": true
+          },
+          "adi": {
+            "type": "string",
+            "nullable": true
+          },
+          "ikinciAdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "soyadi": {
+            "type": "string",
+            "nullable": true
+          },
+          "ikinciSoyadi": {
+            "type": "string",
+            "nullable": true
+          },
+          "dogumTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dogumYeri": {
+            "type": "string",
+            "nullable": true
+          },
+          "tcNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "iseGirisTarih": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "aktif": {
+            "type": "boolean"
+          },
+          "meslek": {
+            "type": "string",
+            "nullable": true
+          },
+          "departman": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "adres": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "sirketID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SirketYoneticiGuncelle_Dto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fotograf": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "adres": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SirketYonetici_Dto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fotograf": {
+            "type": "string",
+            "nullable": true
+          },
+          "adi": {
+            "type": "string",
+            "nullable": true
+          },
+          "soyadi": {
+            "type": "string",
+            "nullable": true
+          },
+          "ikinciAdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "ikinciSoyadi": {
+            "type": "string",
+            "nullable": true
+          },
+          "tcNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "dogumTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "iseGirisTarih": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "aktif": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "meslek": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "adres": {
+            "type": "string",
+            "nullable": true
+          },
+          "sirketID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dogumYeri": {
+            "type": "string",
+            "nullable": true
+          },
+          "departman": {
+            "type": "string",
+            "nullable": true
+          },
+          "maas": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sirket_Dto": {
+        "type": "object",
+        "properties": {
+          "sirketID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ad": {
+            "type": "string",
+            "nullable": true
+          },
+          "unvan": {
+            "type": "string",
+            "nullable": true
+          },
+          "mersisNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "vergiNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "vergiDairesi": {
+            "type": "string",
+            "nullable": true
+          },
+          "logo": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefon": {
+            "type": "string",
+            "nullable": true
+          },
+          "adres": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "calisanSayisi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kurulusYili": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sozlesmeBaslangic": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "sozlesmeBitis": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "aktif": {
+            "type": "boolean"
+          },
+          "paketID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SiteYoneticiGuncelle_Dto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fotograf": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "adres": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SiteYonetici_Dto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fotograf": {
+            "type": "string",
+            "nullable": true
+          },
+          "adi": {
+            "type": "string",
+            "nullable": true
+          },
+          "soyadi": {
+            "type": "string",
+            "nullable": true
+          },
+          "ikinciAdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "ikinciSoyadi": {
+            "type": "string",
+            "nullable": true
+          },
+          "dogumTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dogumYeri": {
+            "type": "string",
+            "nullable": true
+          },
+          "tcNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "iseGirisTarih": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "istenCikisTarihi": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "aktif": {
+            "type": "boolean"
+          },
+          "meslek": {
+            "type": "string",
+            "nullable": true
+          },
+          "departman": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "adres": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TalepGuncelle_Dto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "onayDurumu": {
+            "$ref": "#/components/schemas/OnayDurumu"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
