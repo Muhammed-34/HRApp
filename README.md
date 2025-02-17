@@ -1,4 +1,4 @@
-# İnsan Kaynakları Yönetim Sistemi (IKYS)
+# İnsan Kaynakları Yönetim Sistemi
  
 Bu proje, Admin, Şirket Yöneticisi ve Çalışan rollerine sahip bir İnsan Kaynakları Yönetim Sistemi (IKYS) olarak tasarlanıp uygulanmıştır. Sistem, şirketleri, çalışanları ve talepleri yönetmeye yönelik işlevler sunmaktadır. Backend API, bakım ve ölçeklenebilirlik sağlamak amacıyla Onion Architecture yaklaşımını benimsemektedir. Frontend React ile geliştirilmiştir.
  
