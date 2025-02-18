@@ -1,1 +1,1 @@
-export const baseUrl="http://localhost:5046/api/"
+export const baseUrl="YourApiUrl"
