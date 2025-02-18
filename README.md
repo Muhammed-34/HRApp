@@ -30,5 +30,5 @@ Bu proje, Admin, Şirket Yöneticisi ve Çalışan rollerine sahip bir İnsan Ka
    ```bash
    git clone https://github.com/Muhammed-34/HRApp.git
 
-2. UI için gerekli api urlllerini ekleyin ve modülleri yükleyin.
+2. UI için gerekli api urllerini ekleyin ve modülleri yükleyin.
 3. Backend ve frontend projelerini çalıştırın.
